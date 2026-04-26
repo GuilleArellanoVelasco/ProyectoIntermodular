@@ -1,0 +1,53 @@
+# Laravel/PHP
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+.env.local
+.phpactor.json
+.phpunit.result.cache
+
+# IDEs
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+
+# Auth y secretos
+/auth.json
+
+# Dependencias
+/node_modules
+/vendor
+
+# Builds y caches
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/storage/logs
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
+/storage/app/private
+/storage/app/public
+
+# Residuos del contenedor (HOME de www-data dentro de Docker)
+/.composer
+/.config
+/.bash_history
+/.npm
+/.cache
+
+# Backups
+resources.zip
+*.bak
+*.backup
+Homestead.json
+Homestead.yaml
+Thumbs.db

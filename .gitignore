@@ -1,0 +1,103 @@
+# =============================================================================
+# Documentación del TFG (no forma parte del código fuente)
+# =============================================================================
+entrega.docx
+entrega.docx.bak
+~$ntrega.docx
+~$*.docx
+plan.md
+plantilla.pdf
+ModeloDatos/
+
+# =============================================================================
+# IDEs y editores
+# =============================================================================
+.idea/
+.vscode/
+.fleet/
+.nova/
+.zed/
+*.sublime-project
+*.sublime-workspace
+
+# =============================================================================
+# Sistema operativo
+# =============================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =============================================================================
+# Laravel — secretos y dependencias
+# =============================================================================
+src/.env
+src/.env.backup
+src/.env.production
+src/.env.local
+src/auth.json
+
+# Dependencias
+src/vendor/
+src/node_modules/
+
+# Caches y builds
+src/.phpactor.json
+src/.phpunit.cache/
+src/.phpunit.result.cache
+src/public/build/
+src/public/hot/
+src/public/storage/
+src/bootstrap/cache/*.php
+!src/bootstrap/cache/.gitignore
+
+# Storage runtime
+src/storage/*.key
+src/storage/pail/
+src/storage/logs/
+src/storage/framework/cache/data/
+src/storage/framework/sessions/
+src/storage/framework/testing/
+src/storage/framework/views/
+src/storage/app/private/
+src/storage/app/public/
+
+# Logs sueltos
+*.log
+
+# =============================================================================
+# Residuos del contenedor (HOME del usuario dentro de Docker)
+# =============================================================================
+src/.composer/
+src/.config/
+src/.bash_history
+src/.npm/
+src/.cache/
+
+# =============================================================================
+# Scaffolding obsoleto / Laravel Sail / Homestead
+# =============================================================================
+Homestead.json
+Homestead.yaml
+
+# =============================================================================
+# Backups y residuos
+# =============================================================================
+*.bak
+*.backup
+*.tmp
+*.swp
+*~
+src/resources.zip
+src/database/*.sqlite
+src/database/*.sqlite-journal
+
+# =============================================================================
+# Scripts auxiliares (Python helpers usados durante el desarrollo)
+# =============================================================================
+*.pyc
+__pycache__/
+update_*.py
+fix_*.py
+replace_*.py
+unify_*.py
+tracked_files.txt
