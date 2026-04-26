@@ -22,7 +22,6 @@ class CheckRole
         //Comprobar que está activo
         if(!$request->user()->isActive()){
             abort(403,'Tu cuenta está inactiva. Contacta al administrador.');
-            //temporal, igual es mejor redirigir a una pagina.
         }
         //Comprobar si tiene uno de los roles permitidos
         if(!$request->user()->hasAnyRole($roles)){

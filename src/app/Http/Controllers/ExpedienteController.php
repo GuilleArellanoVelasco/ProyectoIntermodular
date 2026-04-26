@@ -227,7 +227,6 @@ class ExpedienteController extends Controller
             'tipoProcedimiento',
             'gestor',
             'documentos.tipoDocumento',
-            'tareas',
             'estadoProceso',
             'historialProceso.estado',
             'historialProceso.usuario',
@@ -330,7 +329,7 @@ class ExpedienteController extends Controller
                     ->first();
 
                 if ($transicion) {
-                    $expediente->avanzarEstado($transicion->id, "Primera publicacion ({$tipoLabel}) registrada - inicio del periodo de alegaciones");
+                    $expediente->avanzarEstado($transicion->id);
                     $mensaje .= " El periodo de alegaciones ha comenzado.";
                 }
             }

@@ -82,17 +82,6 @@
                 </div>
             </div>
 
-            <div class="flex items-center gap-4 p-4 bg-bg-medium rounded-xl">
-                <div class="w-12 h-12 rounded-xl bg-error/20 text-error flex items-center justify-center">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                </div>
-                <div>
-                    <div class="text-xs text-text-muted uppercase tracking-wide mb-1">Tareas</div>
-                    <div class="text-sm font-medium text-text-primary">{{ $expediente->tareas->whereNotIn('estado', ['completada', 'cancelada'])->count() }} pendientes</div>
-                </div>
-            </div>
         </div>
     </div>
 

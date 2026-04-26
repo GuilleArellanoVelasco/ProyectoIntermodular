@@ -6,8 +6,6 @@ use App\Models\Cliente;
 use App\Models\Consorte;
 use App\Models\Empresa;
 use App\Models\Expediente;
-use App\Models\Notificacion;
-use App\Models\Tarea;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -67,32 +65,11 @@ class TestDataSeeder extends Seeder
             $expedientes[] = $expediente;
         }
 
-        // Crear tareas para los expedientes
-        foreach ($expedientes as $expediente) {
-            $numTareas = rand(1, 5);
-            for ($i = 0; $i < $numTareas; $i++) {
-                Tarea::factory()->create([
-                    'expediente_id' => $expediente->id,
-                    'asignado_a' => collect([$admin, ...$gestores])->random()->id,
-                    'creado_por' => collect([$admin, ...$gestores])->random()->id,
-                ]);
-            }
-        }
-
-        // Crear notificaciones para todos los usuarios
-        $todosUsuarios = User::all();
-        foreach ($todosUsuarios as $usuario) {
-            Notificacion::factory(rand(3, 10))->create([
-                'user_id' => $usuario->id,
-            ]);
-        }
-
         $this->command->info('Datos de prueba creados:');
         $this->command->info('- 1 Administrador (admin@liberxo.com / password)');
         $this->command->info('- 5 Gestores');
         $this->command->info('- 5 Empresas');
         $this->command->info('- 30 Clientes');
         $this->command->info('- ~20 Expedientes');
-        $this->command->info('- Múltiples tareas y notificaciones');
     }
 }

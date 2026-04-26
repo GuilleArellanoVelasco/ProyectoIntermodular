@@ -52,11 +52,6 @@ class Expediente extends Model
         return $this->belongsTo(EstadoExpediente::class, 'estado_id');
     }
 
-    public function tareas()
-    {
-        return $this->hasMany(Tarea::class);
-    }
-
     public function documentos()
     {
         return $this->belongsToMany(Documento::class, 'documento_expediente');

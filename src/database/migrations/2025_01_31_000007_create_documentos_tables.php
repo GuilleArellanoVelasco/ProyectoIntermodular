@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Documentos, Tareas y Notificaciones
+     * Documentos y tablas pivote
      */
     public function up(): void
     {
@@ -40,39 +40,10 @@ return new class extends Migration
 
             $table->primary(['documento_id', 'expediente_id']);
         });
-
-        // Tareas
-        Schema::create('tareas', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('expediente_id')->constrained('expedientes')->onDelete('cascade');
-            $table->foreignId('asignado_a')->constrained('users');
-            $table->foreignId('creado_por')->constrained('users');
-            $table->string('titulo');
-            $table->text('descripcion')->nullable();
-            $table->date('fecha_vencimiento')->nullable();
-            $table->enum('prioridad', ['baja', 'media', 'alta', 'urgente'])->default('media');
-            $table->enum('estado', ['pendiente', 'en_progreso', 'completada', 'cancelada'])->default('pendiente');
-            $table->timestamp('completada_at')->nullable();
-            $table->timestamps();
-        });
-
-        // Notificaciones
-        Schema::create('notificaciones', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->string('tipo');
-            $table->string('titulo');
-            $table->text('mensaje')->nullable();
-            $table->boolean('leida')->default(false);
-            $table->timestamp('leida_at')->nullable();
-            $table->timestamps();
-        });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('notificaciones');
-        Schema::dropIfExists('tareas');
         Schema::dropIfExists('documento_expediente');
         Schema::dropIfExists('documento_cliente');
         Schema::dropIfExists('documentos');

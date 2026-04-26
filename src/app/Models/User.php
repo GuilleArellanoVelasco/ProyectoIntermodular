@@ -49,21 +49,6 @@ class User extends Authenticatable
         return $this->hasMany(Expediente::class, 'gestor_id');
     }
 
-    public function tareasAsignadas()
-    {
-        return $this->hasMany(Tarea::class, 'asignado_a');
-    }
-
-    public function tareasCreadas()
-    {
-        return $this->hasMany(Tarea::class, 'creado_por');
-    }
-
-    public function notificaciones()
-    {
-        return $this->hasMany(Notificacion::class);
-    }
-
     public function eventosCalendario()
     {
         return $this->hasMany(EventoCalendario::class);
