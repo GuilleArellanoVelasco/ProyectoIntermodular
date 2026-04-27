@@ -1,12 +1,8 @@
 # =============================================================================
-# Documentación del TFG (no forma parte del código fuente)
+# Documentación y archivos personales (no forman parte del código fuente)
 # =============================================================================
-entrega.docx
-entrega.docx.bak
-~$ntrega.docx
-~$*.docx
-plan.md
-plantilla.pdf
+*.docx
+*.pdf
 ModeloDatos/
 
 # =============================================================================
@@ -74,30 +70,24 @@ src/.npm/
 src/.cache/
 
 # =============================================================================
-# Scaffolding obsoleto / Laravel Sail / Homestead
+# Scaffolding obsoleto (Homestead)
 # =============================================================================
 Homestead.json
 Homestead.yaml
 
 # =============================================================================
-# Backups y residuos
+# Backups, archivos temporales y bases de datos locales
 # =============================================================================
 *.bak
 *.backup
 *.tmp
 *.swp
 *~
-src/resources.zip
 src/database/*.sqlite
 src/database/*.sqlite-journal
 
 # =============================================================================
-# Scripts auxiliares (Python helpers usados durante el desarrollo)
+# Scripts auxiliares (helpers de desarrollo)
 # =============================================================================
 *.pyc
 __pycache__/
-update_*.py
-fix_*.py
-replace_*.py
-unify_*.py
-tracked_files.txt
