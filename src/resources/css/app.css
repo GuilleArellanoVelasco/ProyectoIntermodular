@@ -564,40 +564,6 @@
         @apply text-sm text-text-secondary mb-6;
     }
 
-    /* FAB */
-    .fab-container {
-        @apply fixed bottom-8 right-8 z-[1000];
-    }
-
-    .fab-main {
-        @apply w-14 h-14 rounded-full border-none text-white cursor-pointer shadow-[0_4px_12px_rgba(255,140,66,0.3)] transition-all duration-200 flex items-center justify-center;
-        background: linear-gradient(135deg, #ff8c42 0%, #e67a35 100%);
-    }
-
-    .fab-main:hover {
-        @apply scale-110 rotate-90 shadow-[0_4px_12px_rgba(255,140,66,0.5)];
-    }
-
-    .fab-menu {
-        @apply absolute bottom-[65px] right-0 flex flex-col gap-2 opacity-0 pointer-events-none translate-y-2.5 transition-all duration-200;
-    }
-
-    .fab-container:hover .fab-menu {
-        @apply opacity-100 pointer-events-auto translate-y-0;
-    }
-
-    .fab-item {
-        @apply flex items-center gap-3 py-3 px-4 bg-bg-dark border border-primary-400/30 rounded-xl text-primary-400 font-semibold text-sm whitespace-nowrap shadow-[0_10px_15px_-3px_rgba(0,0,0,0.3)] transition-all duration-200 no-underline;
-    }
-
-    .fab-item:hover {
-        @apply bg-bg-medium border-primary-400 -translate-x-1;
-    }
-
-    .fab-item svg {
-        @apply w-5 h-5;
-    }
-
     /* Checkbox */
     .checkbox-label {
         @apply flex items-center gap-3 cursor-pointer text-text-secondary text-sm select-none;

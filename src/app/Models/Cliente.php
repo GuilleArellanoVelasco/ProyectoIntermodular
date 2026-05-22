@@ -6,11 +6,10 @@ use App\Traits\HasPersonName;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Cliente extends Model
 {
-    use HasFactory, SoftDeletes, HasPersonName;
+    use HasFactory, HasPersonName;
 
     protected $fillable = [
         'empresa_id',
